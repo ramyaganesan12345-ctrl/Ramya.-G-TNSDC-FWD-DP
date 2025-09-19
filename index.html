@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ramya G — Student Portfolio</title>
+  <meta name="description" content="Student portfolio for Ramya — projects, skills, resume and contact." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">R</div>
+        <div>
+          <h1>Ramya G</h1>
+          <p class="lead">Computer Science student — Web dev · UI · Projects</p>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card about" id="about">
+          <h2>About</h2>
+          <p>Hi — I'm Ramya, a student focused on front-end web development and small full-stack projects. I love turning ideas into interactive interfaces and learning new technologies.</p>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React (learning)</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">Git</span>
+          </div>
+        </div>
+
+        <div class="card" id="projects">
+          <h2>Projects</h2>
+          <div class="projects-list" id="projects-list">
+            <div class="project" data-title="Portfolio Site" data-desc="A responsive portfolio built with HTML/CSS/JS. Includes theme toggle and project modal." data-link="#">
+              <h3>Portfolio Site</h3>
+              <p>HTML, CSS, JavaScript — responsive personal site.</p>
+            </div>
+            <div class="project" data-title="Todo App" data-desc="A simple todo app with localStorage persistence." data-link="#">
+              <h3>Todo App</h3>
+              <p>JavaScript, localStorage — task management UI.</p>
+            </div>
+            <div class="project" data-title="Weather UI" data-desc="Front-end for weather data using a public API." data-link="#">
+              <h3>Weather UI</h3>
+              <p>API, Fetch — displays weather and icons.</p>
+            </div>
+            <div class="project" data-title="Mini Blog" data-desc="A small blog using static markdown and client-side rendering." data-link="#">
+              <h3>Mini Blog</h3>
+              <p>Markdown rendering and client routing.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Experience & Education</h2>
+          <p>B.Sc. Computer Science — Current<br/>Internship: Front-end intern (summer)</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Email: ramya@example.com</p>
+          <a class="resume-btn" href="#" id="download-resume">Download Resume</a>
+        </div>
+
+        <div class="card">
+          <h3>Quick Stats</h3>
+          <p><strong>4</strong> Projects</p>
+          <p><strong>2</strong> Internships</p>
+        </div>
+
+        <div class="card" id="contact">
+          <h3>Send a message</h3>
+          <form id="contact-form">
+            <label for="name">Name</label>
+            <input id="name" required placeholder="Your name" />
+            <label for="msg">Message</label>
+            <textarea id="msg" rows="4" required placeholder="Say hi — what do you want to ask?"></textarea>
+            <button type="submit">Send</button>
+            <p id="form-status"></p>
+          </form>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Ramya G — Built with ♥</p>
+    </footer>
+  </div>
+
+  <!-- Modal for project details -->
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <button class="close" id="modal-close">✕</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <a id="modal-link" href="#" class="resume-btn">Open Project</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
